@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Weather Facts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <h1>Weather Facts</h1>
+    
+    <div class="container">
+        <fieldset>
+          <form action="/" method="post">
+            <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
+            <input type="submit" class="ghost-button" value="Get Weather">
+          </form>
+          <% if(weather !== null){ %>
+            <p><%= weather %></p>
+          <% } %>
+          <% if(error !== null){ %>
+            <p><%= error %></p>
+          <% } %>
+        </fieldset>
+    </div>
+    
+</body>
+</html>
